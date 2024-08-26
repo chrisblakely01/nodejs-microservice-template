@@ -6,6 +6,6 @@ export const getHealthCheck = async (req: Request, res: Response) => {
     const health = await healthService.getHealthCheck();
     res.status(201).json(health);
   } catch (error) {
-    res.status(400).json({ error: "Failed to create product" });
+    res.status(400).json({ error: "Health check failed" });
   }
 };
